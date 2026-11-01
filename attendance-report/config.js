@@ -18,7 +18,7 @@ window.APP_CONFIG = {
     document.querySelectorAll("[data-academy]").forEach(function (el) {
       el.textContent = c.academy || "";
     });
-    if (c.academy) document.title = c.academy + " · " + baseTitle;
+    if (c.academy) document.title = baseTitle ? c.academy + " · " + baseTitle : c.academy;
   }
   function ready(fn) {
     if (document.readyState !== "loading") fn();
